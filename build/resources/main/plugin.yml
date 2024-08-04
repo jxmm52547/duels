@@ -1,0 +1,8 @@
+name: duels
+version: '1.0'
+main: xyz.jxmm.Duels
+api-version: '1.20'
+prefix: 終末牽挂@靖暄
+authors: [ 靖暄 ]
+description: 单挑
+website: jxmm.xyz
