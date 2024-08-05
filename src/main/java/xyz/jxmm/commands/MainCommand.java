@@ -1,17 +1,20 @@
 package xyz.jxmm.commands;
 
+import org.bukkit.Color;
+import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.defaults.BukkitCommand;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import xyz.jxmm.Duels;
-import xyz.jxmm.commands.admin.Admin;
 import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
+import xyz.jxmm.commands.admin.Admin;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class MainCommand extends BukkitCommand implements ParentCommand {
+public class MainCommand extends Command implements ParentCommand {
 
     /* SubCommands ArenaList */
     private static List<SubCommand> subCommandList = new ArrayList<>();
@@ -26,13 +29,35 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        sender.sendMessage(" ");
-        sender.sendMessage("§8§l|-" + " §6" +
-                Duels.getPlugin().getDescription().getName() + " v" +
-                Duels.getPlugin().getDescription().getVersion() + " §7- §cCommands");
-        sender.sendMessage(" ");
-        sender.sendMessage(commandLabel);
-        sender.sendMessage(args);
+        if (sender instanceof ConsoleCommandSender) {
+            sender.sendMessage("This command is for player");
+            return true;
+        }
+
+        if (args.length == 0) {
+            sender.sendMessage(" ");
+            sender.sendMessage("§8§l|-" + " §6" +
+                    Duels.getPlugin().getDescription().getName() + " v" +
+                    Duels.getPlugin().getDescription().getVersion() + " §7- §cCommands");
+            sender.sendMessage(" ");
+            sender.sendMessage(commandLabel);
+            sender.sendMessage(args);
+            return true;
+        }
+
+        boolean commandFound = false;
+        for (SubCommand sb : getSubCommands()) {
+            if (sb.getSubCommandName().equalsIgnoreCase(args[0])) {
+                if (sb.hasPermission(sender)) {
+                    commandFound = sb.execute(Arrays.copyOfRange(args, 1, args.length), sender);
+                }
+            }
+        }
+
+        if (!commandFound) {
+            sender.sendMessage(Color.RED + "未知指令!");
+        }
+
         return true;
     }
 
@@ -48,6 +73,7 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
 
     @Override
     public void addSubCommand(SubCommand subCommand) {
+        subCommandList.add(subCommand);
 
     }
 
@@ -58,6 +84,6 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
 
     @Override
     public List<SubCommand> getSubCommands() {
-        return null;
+        return subCommandList;
     }
 }

@@ -125,7 +125,7 @@ public abstract class SubCommand {
      * Check if player has permission to use the command
      */
     public boolean hasPermission(CommandSender p) {
-        return permission.isEmpty() || p.hasPermission("bw.*") || p.hasPermission(permission);
+        return permission.isEmpty() || p.hasPermission("duels.*") || p.hasPermission(permission);
     }
 
 
