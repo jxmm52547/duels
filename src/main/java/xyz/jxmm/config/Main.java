@@ -1,6 +1,8 @@
 package xyz.jxmm.config;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import org.yaml.snakeyaml.Yaml;
 import xyz.jxmm.Duels;
@@ -47,7 +49,7 @@ public class Main {
 
     public static JsonObject lobby(){
         JsonObject lobby = new JsonObject();
-        lobby.addProperty("world","");
+        lobby.add("world", new JsonArray());
         lobby.addProperty("x",0);
         lobby.addProperty("y",0);
         lobby.addProperty("z",0);

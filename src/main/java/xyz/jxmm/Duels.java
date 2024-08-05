@@ -20,6 +20,7 @@ import java.util.Properties;
 
 public final class Duels extends JavaPlugin {
     public static String mainCmd = "duels", link ="https://github.com/jxmm52547/duels";
+    public static JsonObject config = new JsonObject();
     private static Duels plugin;
 
     private static String lobbyWorld = "";
@@ -30,7 +31,6 @@ public final class Duels extends JavaPlugin {
         plugin = this;
 
         //配置文件
-        JsonObject config;
         try {
             config = xyz.jxmm.config.Main.main();
         } catch (IOException e) {
@@ -38,8 +38,9 @@ public final class Duels extends JavaPlugin {
         }
 
         //设置主大厅
-        lobbyWorld = config.getAsJsonObject("lobby").get("world").getAsString();
-        lobbyLocation = new Location(Bukkit.getWorld(lobbyWorld), config.getAsJsonObject("lobby").get("x").getAsDouble(), config.getAsJsonObject("lobby").get("y").getAsDouble(), config.getAsJsonObject("lobby").get("z").getAsDouble());
+        if (!config.getAsJsonObject("lobby").get("world").isJsonArray()){
+            setLobbyLocation();
+        }
 
         //注册主命令
         try{
@@ -66,5 +67,15 @@ public final class Duels extends JavaPlugin {
 
     public static Plugin getPlugin() {
         return plugin;
+    }
+
+    public static void setLobbyLocation(){
+
+        lobbyWorld = config.getAsJsonObject("lobby").get("world").getAsString();
+        lobbyLocation = new Location(
+                Bukkit.getWorld(lobbyWorld),
+                config.getAsJsonObject("lobby").get("x").getAsDouble(),
+                config.getAsJsonObject("lobby").get("y").getAsDouble(),
+                config.getAsJsonObject("lobby").get("z").getAsDouble());
     }
 }

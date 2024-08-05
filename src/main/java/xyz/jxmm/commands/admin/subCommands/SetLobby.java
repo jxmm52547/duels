@@ -38,6 +38,7 @@ public class SetLobby extends SubCommand{
         xyz.jxmm.config.Change.change(new String[]{"lobby", "yaw"}, String.valueOf(yaw));
         xyz.jxmm.config.Change.change(new String[]{"lobby", "pitch"}, String.valueOf(pitch));
 
+        Duels.setLobbyLocation();
         s.sendMessage("设置成功");
         return true;
     }

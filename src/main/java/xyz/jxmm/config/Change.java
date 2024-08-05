@@ -6,10 +6,7 @@ import xyz.jxmm.Duels;
 import xyz.jxmm.utils.FileReaderMethod;
 import xyz.jxmm.utils.FileWriterMethod;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
@@ -27,6 +24,12 @@ public class Change {
             json.getAsJsonObject("lobby").addProperty(args[1], value);
         }
         FileWriterMethod.fileWriter(cfg.getPath(), gson.toJson(json));
+
+        try {
+            Duels.config = gson.fromJson(new InputStreamReader(new FileInputStream(cfg), StandardCharsets.UTF_8), JsonObject.class);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
