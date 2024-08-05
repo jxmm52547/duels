@@ -9,10 +9,12 @@ import xyz.jxmm.Duels;
 import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
 import xyz.jxmm.commands.admin.Admin;
+import xyz.jxmm.commands.tools.TabComplete;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class MainCommand extends Command implements ParentCommand {
 
@@ -62,6 +64,11 @@ public class MainCommand extends Command implements ParentCommand {
     }
 
     @Override
+    public List<String> tabComplete(CommandSender sender, String alias, String[] args) throws IllegalArgumentException {
+        return TabComplete.tabComplete(sender, alias, args, null, getSubCommands());
+    }
+
+    @Override
     public boolean hasSubCommand(String name) {
         for (SubCommand sc : getSubCommands()) {
             if (sc.getSubCommandName().equalsIgnoreCase(name)) {
@@ -80,6 +87,15 @@ public class MainCommand extends Command implements ParentCommand {
     @Override
     public void sendSubCommands(Player p) {
 
+    }
+
+    public SubCommand getSubCommand(String name) {
+        for (SubCommand sc : getSubCommands()) {
+            if (sc.getSubCommandName().equalsIgnoreCase(name)) {
+                return sc;
+            }
+        }
+        return null;
     }
 
     @Override

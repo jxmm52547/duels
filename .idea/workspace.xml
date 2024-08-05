@@ -5,11 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90fe475d-2122-4acf-a90a-16b5365075eb" name="更改" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/GetName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/PlayerJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetLobby.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetupArena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/tools/TabComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Change.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/utils/FileReaderMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/utils/FileWriterMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/xyz/jxmm/commands/admin/subCommands/GetName.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/xyz/jxmm/commands/admin/subCommands/GetName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Admin.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/Duels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/Duels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/ParentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/ParentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/SubCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/SubCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/MainCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/GetName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/GetName.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,12 +87,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Downloads/Compressed/tongyi-jetbrains-latest.zip",
+    "last_opened_file_path": "D:/projects/duels/src/main/java/xyz/jxmm/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "项目",
+    "project.structure.last.edited": "库",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -75,6 +100,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\duels\src\main\java\xyz\jxmm\utils" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="xyz.jxmm.commands" />
     </key>
@@ -132,7 +160,9 @@
       <workItem from="1722806831851" duration="41000" />
       <workItem from="1722806908335" duration="6590000" />
       <workItem from="1722814071265" duration="97000" />
-      <workItem from="1722821372441" duration="3860000" />
+      <workItem from="1722821372441" duration="4483000" />
+      <workItem from="1722866911836" duration="1418000" />
+      <workItem from="1722876704741" duration="15913000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -142,7 +172,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722807974136</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1722859224866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722859224866</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1722859376801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722859376802</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

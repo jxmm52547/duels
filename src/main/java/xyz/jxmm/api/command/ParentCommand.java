@@ -1,10 +1,14 @@
 package xyz.jxmm.api.command;
 
+import org.bukkit.Location;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.List;
 
 public interface ParentCommand {
+
+    List<String> tabComplete(CommandSender s, String alias, String[] args, Location location) throws IllegalArgumentException;
 
     /**
      * Check if a parent command has the target sub-command

@@ -1,5 +1,6 @@
 package xyz.jxmm.commands.admin.subCommands;
 
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
@@ -9,15 +10,32 @@ import xyz.jxmm.commands.admin.Admin;
 
 import java.util.List;
 
-public class GetName {
+public class GetName extends SubCommand {
 
-    public static void execute(CommandSender s) {
-        if (s instanceof ConsoleCommandSender) {
-            s.sendMessage("§c该命令只能由玩家执行");
-        }
-
-        Player player = (Player) s;
-        player.sendTitle("§a你的名字是：" + player.getName(), "§b你的UUID是：" + player.getUniqueId(), 10, 20, 10);
+    /**
+     * Create a sub-command for a bedWars command
+     * Make sure you return true or it will say command not found
+     *
+     * @param parent parent command
+     * @param name   sub-command name
+     */
+    public GetName(ParentCommand parent, String name) {
+        super(parent, name);
+        setDisplayInfo(new TextComponent("§a§l获取玩家名§r"));
     }
 
+    @Override
+    public boolean execute(String[] args, CommandSender s) {
+        if (s instanceof Player){
+            Player p = (Player) s;
+            p.sendTitle("§a§l玩家名§r", p.getName(), 10, 20, 10);
+            return true;
+        }
+        return true;
+    }
+
+    @Override
+    public List<String> getTabComplete() {
+        return null;
+    }
 }

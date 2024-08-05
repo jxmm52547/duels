@@ -23,8 +23,6 @@ public abstract class SubCommand {
     private String permission = "";
 
     /**
-     * Create a sub-command for a bedWars command
-     * Make sure you return true or it will say command not found
      *
      * @param name   sub-command name
      * @param parent parent command

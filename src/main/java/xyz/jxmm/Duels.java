@@ -1,21 +1,47 @@
 package xyz.jxmm;
 
+import com.google.gson.JsonObject;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.CommandMap;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.yaml.snakeyaml.Yaml;
 import xyz.jxmm.commands.MainCommand;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.util.Properties;
 
 public final class Duels extends JavaPlugin {
-    public static String mainCmd = "bw", link ="https://github.com/jxmm52547/duels";
+    public static String mainCmd = "duels", link ="https://github.com/jxmm52547/duels";
     private static Duels plugin;
+
+    private static String lobbyWorld = "";
+    static Location lobbyLocation = null;
 
     @Override
     public void onEnable() {
         plugin = this;
+
+        //配置文件
+        JsonObject config;
+        try {
+            config = xyz.jxmm.config.Main.main();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        //设置主大厅
+        lobbyWorld = config.getAsJsonObject("lobby").get("world").getAsString();
+        lobbyLocation = new Location(Bukkit.getWorld(lobbyWorld), config.getAsJsonObject("lobby").get("x").getAsDouble(), config.getAsJsonObject("lobby").get("y").getAsDouble(), config.getAsJsonObject("lobby").get("z").getAsDouble());
+
+        //注册主命令
         try{
             Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
             bukkitCommandMap.setAccessible(true);
@@ -25,9 +51,11 @@ public final class Duels extends JavaPlugin {
             throw new RuntimeException(e);
         }
 
+        //监听玩家连接到服务器
+        Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
 
-        this.getLogger().info(ChatColor.AQUA + "成功加载");
-        // Plugin startup logic
+
+        this.getLogger().info("成功加载");
 
     }
 
