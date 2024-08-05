@@ -1,0 +1,64 @@
+<changelist name="在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1" date="1722859267092" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行更新之前于 2024/8/5 20:01 取消提交了更改 [更改]" />
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/xyz/jxmm/commands/MainCommand.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/xyz/jxmm/commands/MainCommand.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/MainCommand.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/libs/duels-1.0.jar" />
+    <option name="AFTER_PATH" value="build/libs/duels-1.0.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/duels-1.0.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/compileTransaction/stash-dir/MainCommand.class.uniqueId0" />
+    <option name="AFTER_PATH" value="build/tmp/compileJava/compileTransaction/stash-dir/MainCommand.class.uniqueId0" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/MainCommand.class.uniqueId0" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/resourceHashesCache.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/resourceHashesCache.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/resourceHashesCache.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/previous-compilation-data.bin" />
+    <option name="AFTER_PATH" value="build/tmp/compileJava/previous-compilation-data.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/previous-compilation-data.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/xyz/jxmm/api/command/SubCommand.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/xyz/jxmm/api/command/SubCommand.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/SubCommand.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/xyz/jxmm/commands/admin/Admin.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/xyz/jxmm/commands/admin/Admin.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_8_5_20_01_取消提交了更改_[更改]1/Admin.class" />
+  </binary>
+</changelist>
