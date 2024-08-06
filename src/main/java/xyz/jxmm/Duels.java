@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.CommandMap;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.yaml.snakeyaml.Yaml;
 import xyz.jxmm.commands.MainCommand;
@@ -55,6 +56,10 @@ public final class Duels extends JavaPlugin {
 
         //监听玩家连接到服务器
         Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
+
+        api = new API();
+        Bukkit.getServicesManager().register(xyz.jxmm.api.Duels.class, api, this, ServicePriority.Highest);
+
 
 
         this.getLogger().info("成功加载");

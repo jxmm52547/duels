@@ -3,7 +3,6 @@ package xyz.jxmm.api;
 import org.bukkit.entity.Player;
 
 import xyz.jxmm.api.command.ParentCommand;
-import xyz.jxmm.api.server.RestoreAdapter;
 
 public interface Duels {
     IStats getStatsUtil();
@@ -22,11 +21,6 @@ public interface Duels {
      * Get bedWars main command
      */
     ParentCommand getBedWarsCommand();
-
-    /**
-     * Get the restore adapter.
-     */
-    RestoreAdapter getRestoreAdapter();
 
 
 

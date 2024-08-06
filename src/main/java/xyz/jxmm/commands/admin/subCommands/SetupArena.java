@@ -24,7 +24,7 @@ public class SetupArena extends SubCommand {
 
     @Override
     public List<String> getTabComplete() {
-        return Duels.getAPI().getRestoreAdapter().getWorldsList();
+       return null;
     }
 
 }

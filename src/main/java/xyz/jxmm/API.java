@@ -4,6 +4,8 @@ import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.server.RestoreAdapter;
 import xyz.jxmm.commands.MainCommand;
 
+import java.util.logging.Level;
+
 public class API implements xyz.jxmm.api.Duels{
     private static RestoreAdapter restoreAdapter;
     @Override
@@ -16,8 +18,5 @@ public class API implements xyz.jxmm.api.Duels{
         return MainCommand.instance;
     }
 
-    @Override
-    public RestoreAdapter getRestoreAdapter() {
-        return restoreAdapter;
-    }
+
 }
