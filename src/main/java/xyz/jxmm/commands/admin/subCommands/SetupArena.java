@@ -5,7 +5,6 @@ import xyz.jxmm.Duels;
 import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SetupArena extends SubCommand {
@@ -25,16 +24,7 @@ public class SetupArena extends SubCommand {
 
     @Override
     public List<String> getTabComplete() {
-        List<String> arenaList = new ArrayList<>();
-        //获取目录下的存档文件夹列表
-        for (String arena : Duels.getPlugin().getServer().getWorldContainer().list()) {
-            if (arena.endsWith(".json")) {
-                arenaList.add(arena.replace(".json", ""));
-            }
-        }
-
-
-        return null;
+        return Duels.getAPI().getRestoreAdapter().getWorldsList();
     }
 
 }

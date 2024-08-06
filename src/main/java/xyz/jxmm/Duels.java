@@ -25,6 +25,7 @@ public final class Duels extends JavaPlugin {
 
     private static String lobbyWorld = "";
     static Location lobbyLocation = null;
+    private static xyz.jxmm.api.Duels api;
 
     @Override
     public void onEnable() {
@@ -77,5 +78,9 @@ public final class Duels extends JavaPlugin {
                 config.getAsJsonObject("lobby").get("x").getAsDouble(),
                 config.getAsJsonObject("lobby").get("y").getAsDouble(),
                 config.getAsJsonObject("lobby").get("z").getAsDouble());
+    }
+
+    public static xyz.jxmm.api.Duels getAPI() {
+        return api;
     }
 }

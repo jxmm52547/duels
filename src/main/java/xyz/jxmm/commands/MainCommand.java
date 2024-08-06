@@ -18,7 +18,7 @@ public class MainCommand extends Command implements ParentCommand {
     /* SubCommands ArenaList */
     private static List<SubCommand> subCommandList = new ArrayList<>();
     /* MainCommand instance*/
-    private static MainCommand instance;
+    public static MainCommand instance;
     public MainCommand(String name) {
         super(name);
         setAliases(List.of("d"));
