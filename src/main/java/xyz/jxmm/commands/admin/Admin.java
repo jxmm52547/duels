@@ -9,6 +9,7 @@ import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
 import xyz.jxmm.commands.admin.subCommands.GetName;
 import xyz.jxmm.commands.admin.subCommands.SetLobby;
+import xyz.jxmm.commands.admin.subCommands.SetupArena;
 
 
 import java.util.ArrayList;
@@ -28,8 +29,9 @@ public class Admin extends SubCommand implements ParentCommand {
     public Admin(ParentCommand parent, String name) {
         super(parent, name);
         setDisplayInfo(new TextComponent("§c管理员指令"));
-        addSubCommand(new GetName(this, "getname"));
-        addSubCommand(new SetLobby(this, "steuplobby"));
+        addSubCommand(new GetName(this, "getName"));
+        addSubCommand(new SetLobby(this, "setupLobby"));
+        addSubCommand(new SetupArena(this, "setupArena"));
     }
 
     @Override
@@ -37,7 +39,7 @@ public class Admin extends SubCommand implements ParentCommand {
         if (args.length > 0) {
             for (SubCommand subCommand : subCommands) {
                 if (subCommand.getSubCommandName().equalsIgnoreCase(args[0])) {
-                    if (subCommand.hasPermission(s)) {
+                    if (s.isOp()) {
                         subCommand.execute(Arrays.copyOfRange(args, 1, args.length), s);
                     } else {
                         s.sendMessage("§cYou don't have permission to use this command");
@@ -47,7 +49,9 @@ public class Admin extends SubCommand implements ParentCommand {
             }
         }
 
-        sendDefaultMessage(args,s);
+        if (args.length == 0){
+            sendDefaultMessage(args,s);
+        }
 
         return true;
     }
@@ -65,7 +69,7 @@ public class Admin extends SubCommand implements ParentCommand {
 
     @Override
     public List<String> tabComplete(CommandSender s, String alias, String[] args, Location location) throws IllegalArgumentException {
-        return xyz.jxmm.commands.tools.TabComplete.tabComplete(s,alias,args,location,subCommands);
+        return null;
     }
 
     @Override

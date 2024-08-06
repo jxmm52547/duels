@@ -19,6 +19,7 @@ public class PlayerJoin implements Listener {
         if (Duels.lobbyLocation != null){
             p.teleport(Duels.lobbyLocation);
             p.sendTitle("§a§l欢迎来到§b§l終末牽挂§a§l的§b§lDuels大厅", "§a§lWelcome back!", 10, 70, 20);
+            p.setGameMode(org.bukkit.GameMode.ADVENTURE);
         }
 
 

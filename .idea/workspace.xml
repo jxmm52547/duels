@@ -12,10 +12,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/Duels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/Duels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/PlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/PlayerJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetLobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetLobby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/arena/Lobby.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/MainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetupArena.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetupArena.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/tools/TabComplete.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +145,7 @@
       <workItem from="1722814071265" duration="97000" />
       <workItem from="1722821372441" duration="4483000" />
       <workItem from="1722866911836" duration="1418000" />
-      <workItem from="1722876704741" duration="17932000" />
+      <workItem from="1722876704741" duration="25170000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -177,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722899012978</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <option name="closed" value="true" />
+      <created>1722901109412</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722901109412</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

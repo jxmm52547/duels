@@ -1,6 +1,5 @@
 package xyz.jxmm.commands;
 
-import org.bukkit.Color;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -9,12 +8,10 @@ import xyz.jxmm.Duels;
 import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
 import xyz.jxmm.commands.admin.Admin;
-import xyz.jxmm.commands.tools.TabComplete;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class MainCommand extends Command implements ParentCommand {
 
@@ -31,6 +28,11 @@ public class MainCommand extends Command implements ParentCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
+        if (!sender.isOp()){
+            sender.sendMessage("§c你没有权限执行此命令!");
+            return true;
+        }
+
         if (sender instanceof ConsoleCommandSender) {
             sender.sendMessage("This command is for player");
             return true;
@@ -57,7 +59,7 @@ public class MainCommand extends Command implements ParentCommand {
         }
 
         if (!commandFound) {
-            sender.sendMessage(Color.RED + "未知指令!");
+            sender.sendMessage("§c未知指令!");
         }
 
         return true;
@@ -65,7 +67,21 @@ public class MainCommand extends Command implements ParentCommand {
 
     @Override
     public List<String> tabComplete(CommandSender sender, String alias, String[] args) throws IllegalArgumentException {
-        return TabComplete.tabComplete(sender, alias, args, null, getSubCommands());
+        if (sender.isOp()) {
+            if (args.length == 1) {
+                List<String> sub = new ArrayList<>();
+                for (SubCommand sb : getSubCommands()) {
+                    sub.add(sb.getSubCommandName());
+                }
+                return sub;
+            } else if (args.length == 2){
+                if (hasSubCommand(args[0])) {
+                    return getSubCommand(args[0]).getTabComplete();
+                }
+            }
+        }
+
+        return null;
     }
 
     @Override
