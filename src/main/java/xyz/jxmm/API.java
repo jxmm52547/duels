@@ -1,13 +1,11 @@
 package xyz.jxmm;
 
 import xyz.jxmm.api.command.ParentCommand;
-import xyz.jxmm.api.server.RestoreAdapter;
 import xyz.jxmm.commands.MainCommand;
 
 import java.util.logging.Level;
 
 public class API implements xyz.jxmm.api.Duels{
-    private static RestoreAdapter restoreAdapter;
     @Override
     public IStats getStatsUtil() {
         return null;
