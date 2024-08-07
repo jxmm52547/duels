@@ -1,6 +1,7 @@
 package xyz.jxmm.api.command;
 
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 
 import java.util.List;
@@ -131,5 +132,5 @@ public abstract class SubCommand {
     /**
      * Manage sub-command tab complete
      */
-    public abstract List<String> getTabComplete();
+    public abstract List<String> getTabComplete(CommandSender s, String alias, String[] args, Location location);
 }

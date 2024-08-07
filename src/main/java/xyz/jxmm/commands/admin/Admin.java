@@ -19,6 +19,8 @@ import java.util.List;
 public class Admin extends SubCommand implements ParentCommand {
 
     private List<SubCommand> subCommands = new ArrayList<>();
+    private String name;
+    private ParentCommand parent;
     /**
      * Create a sub-command for a bedWars command
      * Make sure you return true or it will say command not found
@@ -28,6 +30,8 @@ public class Admin extends SubCommand implements ParentCommand {
      */
     public Admin(ParentCommand parent, String name) {
         super(parent, name);
+        this.name = name;
+        this.parent = parent;
         setDisplayInfo(new TextComponent("§c管理员指令"));
         addSubCommand(new GetName(this, "getName"));
         addSubCommand(new SetLobby(this, "setupLobby"));
@@ -56,6 +60,15 @@ public class Admin extends SubCommand implements ParentCommand {
         return true;
     }
 
+    @Override
+    public List<String> getTabComplete(CommandSender s, String alias, String[] args, Location location) {
+        List<String> tabComplete = new ArrayList<>();
+        for (SubCommand subCommand : subCommands) {
+            tabComplete.add(subCommand.getSubCommandName());
+        }
+        return tabComplete;
+    }
+
     public void sendDefaultMessage(String[] args, CommandSender s){
         if (args.length == 0){
             s.sendMessage(" ");
@@ -69,16 +82,17 @@ public class Admin extends SubCommand implements ParentCommand {
 
     @Override
     public List<String> tabComplete(CommandSender s, String alias, String[] args, Location location) throws IllegalArgumentException {
-        return null;
-    }
-
-    @Override
-    public List<String> getTabComplete() {
-        List<String> tabComplete = new ArrayList<>();
-        for (SubCommand subCommand : subCommands) {
-            tabComplete.add(subCommand.getSubCommandName());
+        if (args.length == 1) {
+            List<String> sub = new ArrayList<>();
+            for (SubCommand sb : getSubCommands()) {
+                sub.add(sb.getSubCommandName());
+            }
+            return sub;
+        } else if (args.length > 1){
+            return getSubCommand(args[0]).getTabComplete(s,alias,Arrays.copyOfRange(args, 1, args.length), null);
         }
-        return tabComplete;
+
+        return null;
     }
 
     @Override
@@ -96,15 +110,22 @@ public class Admin extends SubCommand implements ParentCommand {
 
     }
 
+    public SubCommand getSubCommand(String name) {
+        for (SubCommand sc : getSubCommands()) {
+            if (sc.getSubCommandName().equalsIgnoreCase(name)) {
+                return sc;
+            }
+        }
+        return null;
+    }
+
     @Override
     public List<SubCommand> getSubCommands() {
         return subCommands;
     }
 
-
-
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 }

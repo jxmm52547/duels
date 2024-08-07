@@ -17,10 +17,11 @@ public class MainCommand extends Command implements ParentCommand {
 
     /* SubCommands ArenaList */
     private static List<SubCommand> subCommandList = new ArrayList<>();
-    /* MainCommand instance*/
+    private String name;
     public static MainCommand instance;
     public MainCommand(String name) {
         super(name);
+        this.name = name;
         setAliases(List.of("d"));
         new Admin(this,"admin");
 
@@ -74,11 +75,11 @@ public class MainCommand extends Command implements ParentCommand {
                     sub.add(sb.getSubCommandName());
                 }
                 return sub;
-            } else if (args.length == 2){
-                if (hasSubCommand(args[0])) {
-                    return getSubCommand(args[0]).getTabComplete();
-                }
+            } else if (args.length > 1){
+                return getSubCommand(args[0]).getTabComplete(sender,alias,Arrays.copyOfRange(args, 1, args.length), null);
             }
+
+            return null;
         }
 
         return null;

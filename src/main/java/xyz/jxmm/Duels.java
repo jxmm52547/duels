@@ -3,6 +3,7 @@ package xyz.jxmm;
 import com.google.gson.JsonObject;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameRule;
 import org.bukkit.Location;
 import org.bukkit.command.CommandMap;
 import org.bukkit.plugin.Plugin;
@@ -42,7 +43,11 @@ public final class Duels extends JavaPlugin {
         //设置主大厅
         if (!config.getAsJsonObject("lobby").get("world").isJsonArray()){
             setLobbyLocation();
+            this.getServer().getWorld(config.getAsJsonObject("lobby").get("world").getAsString()).setTime(6000);
+            this.getServer().getWorld(config.getAsJsonObject("lobby").get("world").getAsString()).setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
+            this.getServer().getWorld(config.getAsJsonObject("lobby").get("world").getAsString()).setGameRule(GameRule.DO_WEATHER_CYCLE, false);
         }
+
 
         //注册主命令
         try{
