@@ -7,9 +7,7 @@ import org.bukkit.entity.Player;
 import xyz.jxmm.Duels;
 import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
-import xyz.jxmm.commands.admin.subCommands.GetName;
-import xyz.jxmm.commands.admin.subCommands.SetLobby;
-import xyz.jxmm.commands.admin.subCommands.SetupArena;
+import xyz.jxmm.commands.admin.subCommands.*;
 
 
 import java.util.ArrayList;
@@ -33,9 +31,12 @@ public class Admin extends SubCommand implements ParentCommand {
         this.name = name;
         this.parent = parent;
         setDisplayInfo(new TextComponent("§c管理员指令"));
+        addSubCommand(new BackToLobby(this, "backToLobby"));
         addSubCommand(new GetName(this, "getName"));
         addSubCommand(new SetLobby(this, "setupLobby"));
         addSubCommand(new SetupArena(this, "setupArena"));
+        addSubCommand(new JoinArena(this, "joinArena"));
+        addSubCommand(new SetGamemode(this, "setGamemode"));
     }
 
     @Override
@@ -62,11 +63,7 @@ public class Admin extends SubCommand implements ParentCommand {
 
     @Override
     public List<String> getTabComplete(CommandSender s, String alias, String[] args, Location location) {
-        List<String> tabComplete = new ArrayList<>();
-        for (SubCommand subCommand : subCommands) {
-            tabComplete.add(subCommand.getSubCommandName());
-        }
-        return tabComplete;
+        return tabComplete(s, alias, args, null);
     }
 
     public void sendDefaultMessage(String[] args, CommandSender s){

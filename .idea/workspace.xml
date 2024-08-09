@@ -5,16 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90fe475d-2122-4acf-a90a-16b5365075eb" name="更改" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/arena/ISetupSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/arena/Misc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/arena/SetupSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/arena/VoidChunkGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/arena/config/ArenaList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/SetGamemode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/BackToLobby.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/JoinArena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/setupArena/CreateTeam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/setupArena/SetTeamSpawnPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/setupArena/SetWaitingSpawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/xyz/jxmm/commands/admin/subCommands/GetName.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/xyz/jxmm/commands/admin/subCommands/GetName.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/Duels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/Duels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/SubCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/SubCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/ParentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/api/command/ParentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/MainCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/GetName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/GetName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetLobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetLobby.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetupArena.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/commands/admin/subCommands/SetupArena.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Change.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Change.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/jxmm/config/Main.java" afterDir="false" />
     </list>
+    <list id="a174dfed-1071-410c-9185-7266ab21bd0f" name="Administrator 进行的更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +72,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -64,6 +88,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/projects/duels/src/main/java/xyz/jxmm/utils&quot;,
@@ -71,10 +96,10 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;通义灵码&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,6 +108,8 @@
       <recent name="D:\projects\duels\src\main\java\xyz\jxmm\utils" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="xyz.jxmm.commands.admin.subCommands.setupArena" />
+      <recent name="xyz.jxmm.commands.admin.subCommands.setupArena.createTeam" />
       <recent name="xyz.jxmm.commands" />
     </key>
   </component>
@@ -144,7 +171,10 @@
       <workItem from="1722876704741" duration="26717000" />
       <workItem from="1722951476716" duration="1893000" />
       <workItem from="1722998432334" duration="4690000" />
-      <workItem from="1723041837318" duration="1879000" />
+      <workItem from="1723041837318" duration="2245000" />
+      <workItem from="1723061000465" duration="5392000" />
+      <workItem from="1723156114879" duration="8295000" />
+      <workItem from="1723186231594" duration="11395000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -218,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722954309536</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1723044014261</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723044014261</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

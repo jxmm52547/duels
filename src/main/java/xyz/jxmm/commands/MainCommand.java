@@ -8,6 +8,9 @@ import xyz.jxmm.Duels;
 import xyz.jxmm.api.command.ParentCommand;
 import xyz.jxmm.api.command.SubCommand;
 import xyz.jxmm.commands.admin.Admin;
+import xyz.jxmm.commands.admin.subCommands.setupArena.CreateTeam;
+import xyz.jxmm.commands.admin.subCommands.setupArena.SetTeamSpawnPoint;
+import xyz.jxmm.commands.admin.subCommands.setupArena.SetWaitingSpawn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,6 +27,9 @@ public class MainCommand extends Command implements ParentCommand {
         this.name = name;
         setAliases(List.of("d"));
         new Admin(this,"admin");
+        new SetWaitingSpawn(this,"setWaitingSpawn");
+        new CreateTeam(this,"createTeam");
+        new SetTeamSpawnPoint(this,"setTeamSpawnPoint");
 
     }
 

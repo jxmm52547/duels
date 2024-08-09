@@ -2,31 +2,26 @@ package xyz.jxmm;
 
 import com.google.gson.JsonObject;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.GameRule;
 import org.bukkit.Location;
 import org.bukkit.command.CommandMap;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.yaml.snakeyaml.Yaml;
+import xyz.jxmm.arena.config.ArenaList;
 import xyz.jxmm.commands.MainCommand;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.lang.reflect.Field;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.util.Properties;
 
 public final class Duels extends JavaPlugin {
     public static String mainCmd = "duels", link ="https://github.com/jxmm52547/duels";
     public static JsonObject config = new JsonObject();
     private static Duels plugin;
 
-    private static String lobbyWorld = "";
-    static Location lobbyLocation = null;
+    public static String lobbyWorld = "";
+    public static Location lobbyLocation = null;
     private static xyz.jxmm.api.Duels api;
 
     @Override
@@ -66,6 +61,14 @@ public final class Duels extends JavaPlugin {
         Bukkit.getServicesManager().register(xyz.jxmm.api.Duels.class, api, this, ServicePriority.Highest);
 
 
+        //竞技场目录创建
+        if (!new File(plugin.getDataFolder() + "\\arenas").exists()){
+            new File(plugin.getDataFolder() + "\\arenas").mkdir();
+        }
+
+        ArenaList.main();
+
+
 
         this.getLogger().info("成功加载");
 
@@ -88,6 +91,7 @@ public final class Duels extends JavaPlugin {
                 config.getAsJsonObject("lobby").get("x").getAsDouble(),
                 config.getAsJsonObject("lobby").get("y").getAsDouble(),
                 config.getAsJsonObject("lobby").get("z").getAsDouble());
+        Bukkit.getWorld(lobbyWorld).setSpawnLocation(lobbyLocation);
     }
 
     public static xyz.jxmm.api.Duels getAPI() {

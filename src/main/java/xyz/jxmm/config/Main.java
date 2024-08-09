@@ -1,9 +1,6 @@
 package xyz.jxmm.config;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonNull;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import org.yaml.snakeyaml.Yaml;
 import xyz.jxmm.Duels;
 import xyz.jxmm.utils.FileWriterMethod;
@@ -15,15 +12,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
 public class Main {
-    static Gson gson = new Gson();
+    static Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
     static File cfgFolder = Duels.getPlugin().getDataFolder();
     static File cfg = new File(cfgFolder, "config.json");
 
 
     public static JsonObject main() throws IOException {
         JsonObject json = new JsonObject();
-        System.out.println(cfgFolder);
-        System.out.println(cfg);
         //如果cfg不存在，则创建文件
         if (!cfgFolder.exists()) {
             cfgFolder.mkdirs();
